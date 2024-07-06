@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getDocument } from "@/lib/firebaseAdmin";
 import { FIREBASE_CONSTANTS } from "@/lib/constants";
+export const dynamic = "force-dynamic";
 
 export async function GET(req: any, res: any) {
   try {
