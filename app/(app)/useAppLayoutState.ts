@@ -10,7 +10,6 @@ import { useAppDispatch, useAppSelector } from "@/lib/reduxHooks";
 
 const useAppLayoutState = () => {
   const authState = useAppSelector((state) => state.auth);
-  const cartState = useAppSelector((state) => state.cart);
   const router = useRouter();
   const dispatch = useAppDispatch();
 
@@ -35,8 +34,6 @@ const useAppLayoutState = () => {
     // Use the userRole only if it's defined
     if (userRole) {
       const appRoutes: Route[] = routes.filter((route) => {
-        if (route.path === FE_ROUTES.SHOPPING_CART)
-          route.badge = cartState?.totalCartItems;
         return RBAC[route.role].includes(userRole);
       });
       setAppRoutes(appRoutes);
@@ -46,10 +43,6 @@ const useAppLayoutState = () => {
   useEffect(() => {
     filterRoutes();
   }, [authState?.user]);
-
-  useEffect(() => {
-    filterRoutes();
-  }, [cartState?.totalCartItems]);
 
   const handleLogout = async () => {
     await logout();
