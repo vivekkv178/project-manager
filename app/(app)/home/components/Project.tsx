@@ -15,7 +15,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@vivekkv178/library";
 import { ProjectType } from "../utils/types";
 import { constants } from "../utils/constants";
 import { useAppDispatch } from "@/lib/reduxHooks";
-import { onCartChangeHandler } from "@/lib/reducers/cart";
 
 type ProjectProps = {
   project: ProjectType;
