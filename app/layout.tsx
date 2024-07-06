@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Project-Manager",
     description:
       "Unify Your Workflow with Project Manager. Seamlessly Manage All Your Apps in One Place, Boost Productivity, and Drive Success Across Your Projects!",
-    url: "https://e-order-vivekkv.vercel.app/",
+    url: "https://project-manager-vivekkv.vercel.app/",
     siteName: "Project-Manager",
     images: [
       {
